@@ -1,0 +1,15 @@
+[workspace]
+resolver = "2"
+members = [
+    "programs/profile-manager",
+    "programs/job-application",
+    "programs/contact-gate",
+    "programs/hiring-rewards",
+    "programs/resume-marketplace"
+]
+
+[workspace.dependencies]
+anchor-lang = "0.31.1"
+
+[profile.release]
+overflow-checks = true

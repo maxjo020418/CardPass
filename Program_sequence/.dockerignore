@@ -1,0 +1,21 @@
+# Dependencies and build output
+node_modules
+npm-debug.log
+.yarn*
+target
+**/*.so
+
+# Git
+.git
+.gitignore
+
+# Editor / OS files
+*.swp
+*.swo
+.DS_Store
+.idea
+.vscode
+
+# Other
+coverage
+**/__pycache__

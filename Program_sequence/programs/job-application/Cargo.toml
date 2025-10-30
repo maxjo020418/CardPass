@@ -1,0 +1,23 @@
+[package]
+name = "job-application"
+version = "0.1.0"
+description = "Job application and management system"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "job_application"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+
+[dependencies]
+anchor-lang = { workspace = true }
+anchor-spl = "0.31.1"
+spl-token = { version = "6.0.0", features = ["no-entrypoint"] }
+hiring-rewards = { path = "../hiring-rewards", features = ["cpi"] }

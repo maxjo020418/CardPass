@@ -1,0 +1,22 @@
+[package]
+name = "hiring-rewards"
+version = "0.1.0"
+description = "Automated hiring reward distribution system"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "hiring_rewards"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+
+[dependencies]
+anchor-lang = { workspace = true, features = ["init-if-needed"] }
+anchor-spl = "0.31.1"
+spl-token = { version = "6.0.0", features = ["no-entrypoint"] }

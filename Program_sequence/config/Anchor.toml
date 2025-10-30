@@ -1,0 +1,25 @@
+[toolchain]
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.devnet]
+contact_gate = "Dp7V95LBVp5Y6YVzYTfgrD2PKgXCgYXqw69QT4DqZoP6"
+hiring_rewards = "HQAgXyTzVkb7nPcULH8BbigDFR1Wc8mQWrG2Su3UeD9b"
+job_application = "2qABiq2mqKPrp8H2eFqshFZ4EjTYMHPcmepnHD4TuwgN"
+profile_manager = "9KWbRGWmoX7JVKkeR5XGQhJDGxki15NeFZdkqb5U1MFu"
+resume_marketplace = "9DWZHxCyaPDRj6mWAKP5nMLVBcSL7thyb38RjnEzmnE8"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "localnet"
+wallet = "deployer-wallet.json"
+
+[workspace]
+members = ["programs/profile-manager", "programs/job-application", "programs/contact-gate", "programs/hiring-rewards", "programs/resume-marketplace"]
+
+[scripts]
+test = "npx ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
